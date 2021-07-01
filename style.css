@@ -7,31 +7,54 @@
 
 :root {
     --blue: #0d6efd;
+    --blackish: #212529;
+    --greyish: #343638;
+    --light-grey: #777777;
+    --border-grey: #D6D6D6;
+    --default-trans: all 250ms ease-in-out;
     font-size: 16px;
 }
+
+/* Obecné a často používané */
 
 a {
     text-decoration: none;
     color: #000;
 }
 
+h1 {
+    font-size: 4.5em;
+    font-weight: 700;
+    color: var(--blackish);
+    padding-bottom: 1rem;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border-grey);
+}
+
+/* HLAVIČKA */
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
+    position: sticky;
+    margin: 0 auto 50px;
     max-width: 1300px;
     padding: 20px 0;
-    border-bottom: 1px solid rgb(214, 214, 214);
+    border-bottom: 1px solid var(--border-grey);
 }
 
 section.right {
     display: flex;
 }
 
-.logo-title {
+p.logo-title {
     display: inline-block;
     padding-left: 10px;
+    color: var(--blackish);
     font-size: 2em;
     font-weight: 700;
 }
@@ -53,11 +76,87 @@ li:not(:last-of-type) a{
 
 li > a {
     color: rgb(106, 118, 126);
-    font-size: 1.3em;
+    font-size: 1.35em;
 }
 
 li > a:hover {
     color: var(--blue);
     text-decoration: underline;
     text-underline-offset: 10px;
+}
+
+/* SEKCE: O nás */
+
+.about {
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 10rem;
+}
+
+p.hero-description {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--greyish);
+    padding: 0 9rem;
+    line-height: 1.5;
+    padding-bottom: 1.5rem;
+}
+
+p.version {
+    font-size: 1rem;
+    padding-bottom: 0.9rem;
+}
+
+p.version > span {
+    font-size: 1rem;
+    color: var(--blue);
+}
+
+button {
+    padding: 8px 24px 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    transition: var(--default-trans);
+}
+
+.button-primary {
+    color: #FFF;
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+.button-primary:hover {
+    background-color: #0659d4;
+}
+
+.button-secondary {
+    color: var(--light-grey);
+    background-color: transparent;
+}
+
+.button-secondary:hover {
+    color: #FFF;
+    background-color: var(--light-grey);
+}
+
+.hero-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 2rem auto 0;
+    border: 1px solid white;
+    clip-path: inset(0 0 22% 0);
+    
+}
+
+.hero-img-container {
+    filter: drop-shadow(0px 0px 16px rgba(149, 157, 165, 0.3));
+}
+
+.special-hr {
+    margin-top: -105px;
 }
