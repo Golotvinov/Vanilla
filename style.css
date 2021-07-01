@@ -3,8 +3,11 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font: menu;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
 }
 
 :root {
@@ -40,7 +43,7 @@ h1 {
 h2 {
     font-weight: 300;
     text-align: center;
-    padding: 2.2rem 0;
+    padding: 2.6rem 0;
 }
 
 h4 {
@@ -235,4 +238,34 @@ button {
 .sluzba-card-p {
     font-size: 1rem;
     line-height: 1.6;
+}
+
+/* SEKCE: Portfolio */
+
+.card-group-portfolio {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-group-portfolio:first-of-type {
+    margin-bottom: 25px;
+}
+
+.portfolio-card {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.portfolio-card:not(:last-child) {
+    margin-right: 20px;
+}
+
+.portfolio-card > img {
+    width: 100%;
+    height: 225px;
+}
+
+.portfolio-card > p {
+    text-align: center;
+    font-size: 1rem;
+    padding: 15px 0;
 }
