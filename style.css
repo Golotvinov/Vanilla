@@ -1,3 +1,5 @@
+/* Globální nastavení */
+
 * {
     margin: 0;
     padding: 0;
@@ -22,16 +24,39 @@ a {
     color: #000;
 }
 
-h1 {
-    font-size: 4.5em;
-    font-weight: 700;
+h1, h2, h3, h4, h5 {
     color: var(--blackish);
+}
+
+h1, h2 {
+    font-size: 4.5em;
+}
+
+h1 {
+    font-weight: 700;
     padding-bottom: 1rem;
+}
+
+h2 {
+    font-weight: 300;
+    text-align: center;
+    padding: 2.2rem 0;
+}
+
+h4 {
+    font-size: 2.8em;
+    font-weight: 500;
+    padding-bottom: 5px;
 }
 
 hr {
     border: none;
     border-top: 1px solid var(--border-grey);
+}
+
+section {
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 /* HLAVIČKA */
@@ -41,13 +66,16 @@ header {
     justify-content: space-between;
     align-items: center;
     position: sticky;
+    top: 0%;
+    z-index: 1;
+    background-color: #FFF;
     margin: 0 auto 50px;
     max-width: 1300px;
     padding: 20px 0;
     border-bottom: 1px solid var(--border-grey);
 }
 
-section.right {
+.right {
     display: flex;
 }
 
@@ -88,8 +116,6 @@ li > a:hover {
 /* SEKCE: O nás */
 
 .about {
-    max-width: 1300px;
-    margin: 0 auto;
     text-align: center;
     padding: 0 10rem;
 }
@@ -98,7 +124,7 @@ p.hero-description {
     font-size: 1.3rem;
     font-weight: 300;
     color: var(--greyish);
-    padding: 0 9rem;
+    padding: 0 6rem;
     line-height: 1.5;
     padding-bottom: 1.5rem;
 }
@@ -146,17 +172,67 @@ button {
 .hero-img {
     display: block;
     max-width: 100%;
+    width: 700px;
     height: auto;
-    margin: 2rem auto 0;
+    margin: 2.4rem auto 0;
     border: 1px solid white;
     clip-path: inset(0 0 22% 0);
     
 }
 
 .hero-img-container {
-    filter: drop-shadow(0px 0px 16px rgba(149, 157, 165, 0.3));
+    filter: drop-shadow(0px -5px 16px rgba(43, 43, 43, 0.1));
 }
 
 .special-hr {
-    margin-top: -105px;
+    margin-top: -115px;
+}
+
+/* SEKCE: Služby */
+
+.card-group-sluzby {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sluzba-card {
+    display: flex;
+    align-items: flex-start;
+}
+
+.sluzba-card:not(:last-child) {
+    padding-right: 40px;
+}
+
+.sluzba-card-top {
+    display: flex;
+    align-items: flex-end;
+}
+
+.sluzba-card-icon {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 3px;
+}
+
+.icon-bg-red {
+    background-color: #E91E63;
+}
+
+.icon-bg-blue {
+    background-color: #2196F3;
+}
+
+.icon-bg-green {
+    background-color: #009688;
+}
+
+.sluzba-card-text {
+    display: block;
+    padding-left: 20px;
+}
+
+.sluzba-card-p {
+    font-size: 1rem;
+    line-height: 1.6;
 }
