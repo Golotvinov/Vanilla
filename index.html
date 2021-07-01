@@ -152,8 +152,41 @@
                 <p class="reference-autor">&mdash; Jana Novotná, <span> Fiktivní firma 2 s.r.o.</span></p>
             </div>
         </div>
-        </section>
+    </section>
 
+    <section class="kontakty" id="kontakty">
+        <h2>Kontakty</h2>
+        <form>
+            <div class="contact-row-1">
+                <div class="input-field">
+                    <label for="fname">Jméno</label>
+                    <input type="text" id="jmeno" name="jmeno">
+                </div>
+                <div class="input-field"><label for="lname">Emailová adresa</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+            <div class="contact-row-2">
+                <label for="zprava">Zpráva</label>
+                <textarea id="zprava" name="zprava"></textarea>
+            </div>
+            <div class="submit-btn">
+                <a data-modal="modal-one"><button id="submit-button" class="button-primary">Odeslat
+                        formulář</button></a>
+            </div>
+
+            <div class="modal" id="modal-one">
+                <div class="modal-bg modal-exit"></div>
+                <div class="modal-container">
+                    <h1>Zpráva z odesílacího formuláře</h1>
+                    <h2>Zprávu se podařilo úspěšně odeslat! Můžete nyní toto okno zavřít.</h2>
+                    <button class="modal-close modal-exit">X</button>
+                </div>
+            </div>
+
+        </form>
+    </section>
+    <script src="modal.js"></script>
 </body>
 
 </html>
