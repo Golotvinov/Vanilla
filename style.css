@@ -50,6 +50,7 @@ h4 {
     font-size: 2.8em;
     font-weight: 500;
     padding-bottom: 5px;
+    word-break: break-word;
 }
 
 hr {
@@ -435,3 +436,115 @@ footer {
 .footer-text-info {
     font-size: 1rem;
 }
+
+/* Media Queries */
+
+@media screen and (max-width: 1310px) {
+    header, .card-group-sluzby, .card-group-portfolio, .card-group-reference, form, .footer-content {
+        margin: 0 5%;
+    }
+
+    h1 {
+        padding-top: 50px;
+    }
+
+    .special-hr {
+        margin-top: -8%;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    p.hero-description {
+          padding: 20px 30px;
+      }
+  }
+
+  @media screen and (max-width: 810px) {
+      header {
+          flex-wrap: wrap;
+          margin: 0;
+      }
+
+      header > .left {
+          padding: 20px 20px 5px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+      }
+
+      header > .right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    
+    section.about {
+          padding: 0 8%;
+      }
+
+    p.hero-description {
+        padding: 20px 0;
+    }
+
+    .special-hr {
+        margin-top: -14%;
+    }
+
+    .card-group-sluzby, .card-group-portfolio, .card-group-reference {
+        flex-direction: column;
+    }
+
+    .sluzba-card {
+        padding: 0;
+        padding-bottom: 40px;
+    }
+
+    .card-group-portfolio {
+        align-items: center;
+    }
+
+    .portfolio-card {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .portfolio-card:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .portfolio-card > img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-group-reference {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .reference-card {
+        width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+      .contact-row-1 {
+        flex-direction: column;
+      }
+
+      .input-field {
+          width: 100%;
+      }
+
+      .footer-content {
+        flex-direction: column;
+      }
+
+      .footer-text-info {
+          margin-top: 10px;
+      }
+  }
