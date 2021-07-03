@@ -6,9 +6,13 @@
     font: menu;
 }
 
-*, ::before, ::after {
+*, *:before, *:after {
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
 
 :root {
     --blue: #0d6efd;
